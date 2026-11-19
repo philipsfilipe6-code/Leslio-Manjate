@@ -1,0 +1,636 @@
+/* =========================================
+   VARIÁVEIS E CONFIGURAÇÕES GERAIS
+   ========================================= */
+:root {
+    --bg-deep: #07090f;
+    --bg-card: #101522;
+    --bg-glass: rgba(18, 24, 38, 0.78);
+    --gold: #d4af37;
+    --gold-light: #f3d576;
+    --gold-dark: #a68523;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --border-glass: rgba(212, 175, 55, 0.22);
+    --success: #10b981;
+    --danger: #ef4444;
+    --radius: 14px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-deep);
+    color: var(--text-main);
+}
+
+h1, h2, h3, .brand-name {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.5px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   NAVEGAÇÃO (NAVBAR)
+   ========================================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(7, 9, 15, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-glass);
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--text-main);
+}
+
+.brand-icon {
+    font-size: 1.8rem;
+    color: var(--gold);
+}
+
+.brand-name {
+    display: block;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--gold-light);
+}
+
+.brand-sub {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-admin {
+    padding: 4px 12px;
+    border: 1px solid var(--border-glass);
+    border-radius: 20px;
+    font-size: 0.82rem !important;
+}
+
+/* =========================================
+   BOTÕES
+   ========================================= */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.btn-gold {
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: #07090f;
+}
+
+.btn-gold:hover {
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+}
+
+.btn-outline:hover {
+    background: rgba(212, 175, 55, 0.12);
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+.hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    background: radial-gradient(circle at 70% 30%, #1b2540 0%, #07090f 70%);
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(212, 175, 55, 0.15);
+    border: 1px solid var(--border-glass);
+    color: var(--gold-light);
+    border-radius: 30px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+    font-size: 3.4rem;
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+    background: linear-gradient(to right, #ffffff, var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 2.2rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* =========================================
+   SEÇÕES E CARDÁPIO DIGITAL (FILTROS CSS)
+   ========================================= */
+.section {
+    padding: 6rem 0;
+}
+
+.section-alt {
+    background-color: #0b0f19;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.subtitle {
+    display: block;
+    color: var(--gold);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    margin-bottom: 0.5rem;
+}
+
+.section-header h2 {
+    font-size: 2.4rem;
+}
+
+/* Esconde os radio buttons nativos */
+.menu-tabs input[type="radio"] {
+    display: none;
+}
+
+.tab-labels {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.tab-labels label {
+    padding: 0.65rem 1.4rem;
+    border-radius: 30px;
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.tab-labels label:hover {
+    border-color: var(--gold);
+    color: var(--text-main);
+}
+
+/* Estilo da aba ativa */
+#tab-todos:checked ~ .tab-labels label[for="tab-todos"],
+#tab-pratos:checked ~ .tab-labels label[for="tab-pratos"],
+#tab-mariscos:checked ~ .tab-labels label[for="tab-mariscos"],
+#tab-bebidas:checked ~ .tab-labels label[for="tab-bebidas"] {
+    background: var(--gold);
+    color: #07090f;
+    font-weight: 600;
+}
+
+/* Lógica de filtragem em CSS puro */
+#tab-pratos:checked ~ .menu-grid .menu-card:not([data-category="pratos"]),
+#tab-mariscos:checked ~ .menu-grid .menu-card:not([data-category="mariscos"]),
+#tab-bebidas:checked ~ .menu-grid .menu-card:not([data-category="bebidas"]) {
+    display: none;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 1.8rem;
+}
+
+.menu-card {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--border-glass);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: var(--gold);
+    color: #07090f;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* Gradientes decorativos simulando fotos gastronômicas */
+.card-img {
+    height: 170px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.img-camarao { background: linear-gradient(135deg, #3b1d14, #8c3b19); }
+.img-bife    { background: linear-gradient(135deg, #2b1212, #6b2121); }
+.img-polvo   { background: linear-gradient(135deg, #162436, #2c4c6e); }
+.img-drink   { background: linear-gradient(135deg, #2d1438, #6b246e); }
+
+.card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 0.75rem;
+}
+
+.card-top h3 {
+    font-size: 1.15rem;
+    color: var(--text-main);
+}
+
+.price {
+    color: var(--gold-light);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.card-body p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.prep-time {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.btn-add {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.btn-add:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   RESERVAS & PAGAMENTO (GLASSMORPHISM)
+   ========================================= */
+.dual-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2.5rem;
+}
+
+.glass-panel {
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+}
+
+.glass-panel h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.panel-desc {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    margin-bottom: 1.8rem;
+}
+
+.galaxy-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label, .payment-label {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 0.45rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: rgba(7, 9, 15, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 0.92rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+/* Resumo do Pedido */
+.order-summary {
+    background: rgba(7, 9, 15, 0.6);
+    border-radius: 10px;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.6rem;
+}
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.8rem;
+    margin-top: 0.6rem;
+    border-top: 1px dashed rgba(255, 255, 255, 0.15);
+    font-weight: 700;
+    color: var(--gold-light);
+    font-size: 1.05rem;
+}
+
+/* Métodos de Pagamento */
+.payment-methods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.2rem;
+}
+
+.pay-option {
+    cursor: pointer;
+}
+
+.pay-option input {
+    display: none;
+}
+
+.pay-option span {
+    display: block;
+    text-align: center;
+    padding: 0.7rem 0.5rem;
+    background: rgba(7, 9, 15, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.pay-option input:checked + span {
+    border-color: var(--gold);
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--gold-light);
+}
+
+/* =========================================
+   PAINEL DE GESTÃO (ADMIN)
+   ========================================= */
+.admin-panel {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius);
+    padding: 2rem;
+}
+
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-box {
+    background: rgba(7, 9, 15, 0.6);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 3px solid var(--gold);
+}
+
+.stat-num {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.3rem;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.admin-table th, .admin-table td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.92rem;
+}
+
+.admin-table th {
+    color: var(--gold-light);
+    font-weight: 600;
+}
+
+.status {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.status.available {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--success);
+}
+
+.status.soldout {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--danger);
+}
+
+/* =========================================
+   RODAPÉ & RESPONSIVIDADE
+   ========================================= */
+.footer {
+    background: #040509;
+    padding-top: 3.5rem;
+    border-top: 1px solid var(--border-glass);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-bottom: 2.5rem;
+}
+
+.footer h3 {
+    color: var(--gold-light);
+    margin-bottom: 0.5rem;
+}
+
+.footer p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1.2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+    .galaxy-form .form-row {
+        grid-template-columns: 1fr;
+    }
+}

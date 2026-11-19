@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Galáxia | Baía Mall - Experiência Gastronómica</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lesliocss.css">
+</head>
+<body>
+
+    Navegação Superior
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <a href="#" class="brand">
+                <span class="brand-icon">✦</span>
+                <div>
+                    <span class="brand-name">GALÁXIA</span>
+                    <span class="brand-sub">BAÍA MALL • MAPUTO</span>
+                </div>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#cardapio">Cardápio Digital</a>
+                <a href="#reservas">Reservar Mesa</a>
+                <a href="#pedido">Pedido & Pagamento</a>
+                <a href="#gestao" class="nav-admin">Gestão</a>
+            </nav>
+
+            <a href="#reservas" class="btn btn-gold">Reservar Agora</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="badge">Baía Mall • Piso 1, Vista Mar</span>
+            <h1>Uma Constelação de Sabores em Maputo</h1>
+            <p>Explore o nosso cardápio digital interativo, faça o seu pedido online com pagamento instantâneo ou garanta a sua mesa com vista privilegiada.</p>
+            <div class="hero-actions">
+                <a href="#cardapio" class="btn btn-gold">Explorar Cardápio</a>
+                <a href="#pedido" class="btn btn-outline">Fazer Pedido Online</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. Cardápio Digital com Filtros CSS Puro -->
+    <section id="cardapio" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Gastronomia & Assinatura</span>
+                <h2>Cardápio Digital</h2>
+            </div>
+
+            <!-- Controle de Abas via Radio Inputs (Sem JavaScript) -->
+            <div class="menu-tabs">
+                <input type="radio" name="filtro" id="tab-todos" checked>
+                <input type="radio" name="filtro" id="tab-pratos">
+                <input type="radio" name="filtro" id="tab-mariscos">
+                <input type="radio" name="filtro" id="tab-bebidas">
+
+                <div class="tab-labels">
+                    <label for="tab-todos">Todos</label>
+                    <label for="tab-pratos">Pratos Principais</label>
+                    <label for="tab-mariscos">Mariscos</label>
+                    <label for="tab-bebidas">Coquetéis & Bebidas</label>
+                </div>
+
+                <!-- Grid de Pratos -->
+                <div class="menu-grid">
+                    <!-- Item 1 -->
+                    <article class="menu-card" data-category="mariscos">
+                        <div class="card-badge">Mais Pedido</div>
+                        <div class="card-img img-camarao"></div>
+                        <div class="card-body">
+                            <div class="card-top">
+                                <h3>Camarão Tigre Galáxia</h3>
+                                <span class="price">1.650 MT</span>
+                            </div>
+                            <p>Grelhado na brasa com manteiga de alho, ervas finas, arroz de coco e batata salteada.</p>
+                            <div class="card-footer">
+                                <span class="prep-time">⏱ 25 min</span>
+                                <a href="#pedido" class="btn-add">+ Adicionar ao Pedido</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Item 2 -->
+                    <article class="menu-card" data-category="pratos">
+                        <div class="card-img img-bife"></div>
+                        <div class="card-body">
+                            <div class="card-top">
+                                <h3>Picanha Nobre à Baía</h3>
+                                <span class="price">1.450 MT</span>
+                            </div>
+                            <p>Corte selecionado ao ponto, acompanhado de farofa crocante, vinagrete e batatas rústicas.</p>
+                            <div class="card-footer">
+                                <span class="prep-time">⏱ 20 min</span>
+                                <a href="#pedido" class="btn-add">+ Adicionar ao Pedido</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Item 3 -->
+                    <article class="menu-card" data-category="mariscos">
+                        <div class="card-img img-polvo"></div>
+                        <div class="card-body">
+                            <div class="card-top">
+                                <h3>Polvo à Lagareiro Estelar</h3>
+                                <span class="price">1.800 MT</span>
+                            </div>
+                            <p>Tentáculos macios regados em azeite extra virgem, alho confitado e batatas a murro.</p>
+                            <div class="card-footer">
+                                <span class="prep-time">⏱ 30 min</span>
+                                <a href="#pedido" class="btn-add">+ Adicionar ao Pedido</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Item 4 -->
+                    <article class="menu-card" data-category="bebidas">
+                        <div class="card-badge">Assinatura</div>
+                        <div class="card-img img-drink"></div>
+                        <div class="card-body">
+                            <div class="card-top">
+                                <h3>Nebulosa Sunset</h3>
+                                <span class="price">480 MT</span>
+                            </div>
+                            <p>Gin infusionado com frutos vermelhos, tónica artesanal, hibisco e toque cítrico.</p>
+                            <div class="card-footer">
+                                <span class="prep-time">⏱ 5 min</span>
+                                <a href="#pedido" class="btn-add">+ Adicionar ao Pedido</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Reservas de Mesas & Pedido Integrado -->
+    <section id="reservas" class="section section-alt">
+        <div class="container dual-grid">
+            
+            <!-- Bloco de Reserva -->
+            <div class="glass-panel">
+                <span class="subtitle">Garanta o seu lugar</span>
+                <h2>Reserva de Mesa</h2>
+                <p class="panel-desc">Escolha o ambiente ideal no Baía Mall: Salão Principal, Varanda Vista Mar ou Sala VIP.</p>
+
+                <form class="galaxy-form" action="#confirmacao">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Nome Completo</label>
+                            <input type="text" placeholder="Ex: Thayson Marcelino" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Telefone (WhatsApp)</label>
+                            <input type="tel" placeholder="+258 84 000 0000" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Data</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Horário</label>
+                            <select required>
+                                <option value="">Selecionar hora</option>
+                                <option>12:30 - Almoço</option>
+                                <option>14:00 - Almoço</option>
+                                <option>19:30 - Jantar</option>
+                                <option>21:00 - Jantar</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Nº de Pessoas</label>
+                            <select>
+                                <option>2 Pessoas</option>
+                                <option>4 Pessoas</option>
+                                <option>6 Pessoas</option>
+                                <option>Grupo (+8 Pessoas)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Ambiente</label>
+                            <select>
+                                <option>Varanda Vista Baía</option>
+                                <option>Salão Interno Climatizado</option>
+                                <option>Área Lounge VIP</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-gold btn-full">Confirmar Reserva de Mesa</button>
+                </form>
+            </div>
+
+            <!-- Bloco de Pedido & Pagamento Online -->
+            <div id="pedido" class="glass-panel">
+                <span class="subtitle">Checkout Rápido</span>
+                <h2>Pedido & Pagamento Online</h2>
+                <p class="panel-desc">Peça para consumir na mesa, levantamento (Take-away) ou entrega.</p>
+
+                <div class="order-summary">
+                    <div class="order-item">
+                        <span>1x Camarão Tigre Galáxia</span>
+                        <strong>1.650 MT</strong>
+                    </div>
+                    <div class="order-item">
+                        <span>1x Nebulosa Sunset</span>
+                        <strong>480 MT</strong>
+                    </div>
+                    <div class="order-total">
+                        <span>Total a Pagar</span>
+                        <span>2.130 MT</span>
+                    </div>
+                </div>
+
+                <form class="galaxy-form">
+                    <div class="form-group">
+                        <label>Modalidade do Pedido</label>
+                        <select>
+                            <option>Consumo na Mesa (Informar nº da mesa)</option>
+                            <option>Take-Away (Levantamento no Baía Mall)</option>
+                            <option>Delivery (Maputo Cidade)</option>
+                        </select>
+                    </div>
+
+                    <label class="payment-label">Método de Pagamento Digital</label>
+                    <div class="payment-methods">
+                        <label class="pay-option">
+                            <input type="radio" name="pagamento" checked>
+                            <span>M-Pesa</span>
+                        </label>
+                        <label class="pay-option">
+                            <input type="radio" name="pagamento">
+                            <span>e-Mola</span>
+                        </label>
+                        <label class="pay-option">
+                            <input type="radio" name="pagamento">
+                            <span>Cartão Visa / Master</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Número da Conta Móvel ou Cartão</label>
+                        <input type="text" placeholder="84 / 85 / 86 / 87 XXX XXXX" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-gold btn-full">Finalizar e Pagar Agora</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. Painel de Gestão do Cardápio Digital (Prévia Administrativa) -->
+    <section id="gestao" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Área Administrativa</span>
+                <h2>Gestão de Cardápio & Mesas</h2>
+            </div>
+
+            <div class="admin-panel">
+                <div class="admin-stats">
+                    <div class="stat-box">
+                        <span class="stat-num">18 / 24</span>
+                        <span class="stat-label">Mesas Ocupadas</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num">32</span>
+                        <span class="stat-label">Pedidos Ativos</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num">48.500 MT</span>
+                        <span class="stat-label">Faturação Hoje</span>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Prato</th>
+                                <th>Categoria</th>
+                                <th>Preço</th>
+                                <th>Disponibilidade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Camarão Tigre Galáxia</td>
+                                <td>Mariscos</td>
+                                <td>1.650 MT</td>
+                                <td><span class="status available">Disponível</span></td>
+                            </tr>
+                            <tr>
+                                <td>Picanha Nobre à Baía</td>
+                                <td>Pratos Principais</td>
+                                <td>1.450 MT</td>
+                                <td><span class="status available">Disponível</span></td>
+                            </tr>
+                            <tr>
+                                <td>Lagosta Grelhada Real</td>
+                                <td>Mariscos</td>
+                                <td>2.400 MT</td>
+                                <td><span class="status soldout">Esgotado</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div>
+                <h3>RESTAURANTE GALÁXIA</h3>
+                <p>Av. da Marginal, Baía Mall - Piso 1, Maputo, Moçambique</p>
+            </div>
+            <div class="footer-hours">
+                <p><strong>Horário de Funcionamento:</strong></p>
+                <p>Segunda a Domingo: 11h30 – 23h30</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Restaurante Galáxia • Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>s
